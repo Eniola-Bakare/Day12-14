@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+:root{
+    /* light theme */
+    --brightBlue: hsl(220, 98%, 61%);
+    --chech-background-linear-gradient: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+    --light-gray:  hsl(0, 0%, 98%);
+    --very-light-gray-blue:  hsl(236, 33%, 92%);
+    --light-gray-blue: hsl(233, 11%, 84%);
+    --dark-gray-blue: hsl(236, 9%, 61%);
+    --very-dark-gray-blue:  hsl(235, 19%, 35%);
+
+    /* dark theme */
+    --very-Dark-Blue: hsl(235, 21%, 11%);
+    --very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+    --light-Grayish-Blue: hsl(234, 39%, 85%);
+    --light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+    --dark-Grayish-Blue: hsl(234, 11%, 52%);
+    --very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+    --very-Dark-Grayish-Blue-hover: hsl(237, 14%, 26%);
+    --transition-delay: 100ms;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    background-color:var(--very-Dark-Blue);
+    background-image: url(./images/bg-desktop-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-delay);
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -60%) ;
+
+    width: 40%;
+    height: 50vh;
+    background-image:linear-gradient(to right hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+/* header- theme-icon */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--light-gray);
+    margin-bottom: 20px;
+}
+.header h3{
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+.theme-icon{
+    display: none;
+    visibility: hidden;
+    transition: var(--transition-delay);
+}
+.theme-icon.active{
+    display: flex;
+    visibility: visible;
+    width: 3rem;
+    transition: var(--transition-delay);
+    cursor: pointer;
+}
+.theme-icon.active:hover{
+    transform: scale(1.2em) ;
+}
+
+/* input section */
+.text-input-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: var(--very-Dark-Desaturated-Blue);
+    box-shadow: 3PX 3px 2px rgba(0,0, 0, .4);
+    transition: var(--transition-delay);
+}
+.check-div{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    
+    /* background-color:var(--brightBlue); */
+    border: 1px solid var(--dark-Grayish-Blue);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.check-div.active{
+    background-image: none;
+    background-color: #fff;
+}
+#input-text{
+    width: 80%;
+    height: 3.5rem;
+    border: none;
+    outline: none;
+    background-color: var(--very-Dark-Desaturated-Blue);
+    
+    color: var(--dark-gray-blue);
+    font-size: 20px;
+}
+#check-btn{
+    width: 25px;
+    height: 110px;
+    cursor: pointer;
+
+}
+#check-btn:hover{
+    transform: scale(1.2);
+}
+
+/* for entered values */
+.entered-container{
+    width: 100%;
+    height: auto;
+    background-color: var(--very-Dark-Desaturated-Blue);
+    box-shadow: 3PX 3px 2px rgba(0,0, 0, .4);
+    transition: var(--transition-delay);
+}
+.check{
+   visibility: hidden;
+}
+.entered-text-visible{
+    width: 80%;
+    color: var(--dark-gray-blue);
+    font-size: 1.3em;
+}
+.entered-div{
+    height: 3.5rem;
+    margin-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background-color:var(--very-Dark-Desaturated-Blue);
+    border-bottom: .1px solid var(--dark-Grayish-Blue);
+    transition: var(--transition-delay);
+}
+.entered-text-footer-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--very-Dark-Grayish-Blue);
+    height: 3.5rem;
+}
+.btn-tabs{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    
+}
+.btn-tabs button,
+.btn-tabs ~ button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--very-Dark-Grayish-Blue);
+    cursor: pointer;
+}
+.btn.active{
+    color: var(--brightBlue);
+}

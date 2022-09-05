@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+      <section class="header">
+        <h3>TODO</h3>
+        <img id="light-theme" class="theme-icon active" src="./images/icon-sun.svg" alt="">
+        <img id="dark-theme"  class="theme-icon" src="./images/icon-moon.svg" alt="">
+      </section>
+
+      <!-- inputarea -->
+      <div class="text-input-container" id="text-input">
+        <input type="text" id="input-text" placeholder="Type in here">
+        <img id="check-btn" src="./images/icon-check.svg" alt="">
+      </div>
+
+      <!-- for entered value -->
+      <div class="entered-container" id="entered-container">
+            <!-- <div class="text-input-container entered-div">
+            <input class="check-div" type="checkbox">
+              <p class="entered-text-visible"> Entered Text here </p>
+              <div><img id="cross" src="./images/icon-cross.svg" alt=""></div>
+            </div>
+           <div class="text-input-container entered-div">
+              <div class="check-div"><img class="check" src="./images/icon-check.svg" alt=""></div>
+              <p class="entered-text-visible"> Entered Text here </p>
+              <div><img id="cross" src="./images/icon-cross.svg" alt=""></div>
+            </div> -->
+
+            <div class="entered-text-footer-container">
+              <p class="remaining-task">5 items left</p>
+              <div class="btn-tabs">
+                <button id="all-tab" class="btn active">All</button>
+                <button id="active-tab" class="btn">Active</button>
+                <button id="completed-tab" class="btn">Completed</button>
+              </div>
+              <button>Clear Completed</button>
+            </div>
+      </div>
+  </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
